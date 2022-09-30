@@ -1,5 +1,7 @@
 package com.ltp.workbook;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
@@ -18,7 +20,9 @@ public class User {
     private String userName;
     @Email(message = "email is not valid")
     private String email;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Past(message = "Cannot be in the future")
+
     private Date dateOfBirth;
 
     public User(String firstName, String lastName, String userName, String email, Date dateOfBirth) {

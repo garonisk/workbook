@@ -12,7 +12,7 @@ public class WorkBookController {
 
     @GetMapping("/")
     public String getForm(Model model) {
-        model.addAttribute("user",user);
+        model.addAttribute("user",new User());
         return "sign-up";
     }
 
@@ -25,6 +25,4 @@ public class WorkBookController {
     public String handleSubmit(User user){
        return "redirect:/result";
     }
-
-    User user = new User();
 }
