@@ -12,11 +12,11 @@ public class User {
     @NotBlank(message = "First name cannot be blank")
     @Size(min = 2, message = "First name is too short")
     private String firstName;
-    @NotBlank(message = "First name cannot be blank")
-    @Size(min = 2, message = "First name is too short")
+    @NotBlank(message = "Last name cannot be blank")
+    @Size(min = 2, message = "Last name is too short")
     private String lastName;
-    @NotBlank(message = "First name cannot be blank")
-    @Size(min = 7, message = "First name is too short")
+    @NotBlank(message = "username cannot be blank")
+    @Size(min = 7, message = "username is too short")
     private String userName;
     @Email(message = "email is not valid")
     private String email;
