@@ -5,12 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 @Controller
 public class WorkBookController {
 
 
     @GetMapping("/")
     public String getForm(Model model) {
+        model.addAttribute("user",user);
         return "sign-up";
     }
 
@@ -23,4 +25,6 @@ public class WorkBookController {
     public String handleSubmit(User user){
        return "redirect:/result";
     }
+
+    User user = new User();
 }
