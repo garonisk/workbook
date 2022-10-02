@@ -1,4 +1,4 @@
-package com.ltp.workbook;
+package com.ltp.workbook.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = AgeValidator.class)
 public @interface Age {
 
-    String message() default "INVALID AGE";
+    String message() default "INVALID USERNAME";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 
