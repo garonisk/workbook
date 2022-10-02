@@ -20,6 +20,7 @@ public class User {
     private String userName;
     @Email(message = "email is not valid")
     private String email;
+    @Age
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Past(message = "Cannot be in the future")
 
